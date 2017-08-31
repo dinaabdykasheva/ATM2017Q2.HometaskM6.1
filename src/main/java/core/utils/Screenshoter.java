@@ -22,9 +22,9 @@ public class Screenshoter {
             String screenshotName = SCREENSHOTS_NAME_TPL + System.nanoTime();
             File copy = new File(screenshotName + ".png");
             FileUtils.copyFile(screenshot, copy);
-            Logger.info("Saved screenshot: " + screenshotName);
-        } catch (IOException e) {
-            Logger.error("Failed to make screenshot");
+            MyLogger.info("Saved screenshot: " + screenshotName);
+        } catch (Exception e) {
+            MyLogger.error("Failed to make screenshot");
         }
     }
 }

@@ -4,7 +4,7 @@ import core.driver.factory.ChromeDriverCreator;
 import core.driver.factory.FirefoxDriverCreator;
 import core.driver.factory.WebDriverCreator;
 import core.service.GlobalProperties;
-import core.utils.Logger;
+import core.utils.MyLogger;
 import org.openqa.selenium.WebDriver;
 import java.util.concurrent.TimeUnit;
 
@@ -42,7 +42,7 @@ public class WebDriverSingleton {
             try {
                 instance.quit();
             } catch (Exception e) {
-                Logger.error("Cannot kill browser");
+                MyLogger.error("Cannot kill browser");
             } finally {
                 instance = null;
             }

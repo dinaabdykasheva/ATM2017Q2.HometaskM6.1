@@ -1,0 +1,8 @@
+19:00:22 DEBUG MyLogger.debug - Finding element
+19:00:22 DEBUG MyLogger.debug - Finding element
+19:00:23 DEBUG MyLogger.debug - Finding element
+19:00:23 DEBUG MyLogger.debug - Finding element
+19:00:24 DEBUG MyLogger.debug - Finding element
+19:00:34 ERROR MyLogger.error - User wasn't logged in
+19:00:44 ERROR MyLogger.error - element not found
+19:00:44 INFO  MyLogger.info - Browser will be closed now...

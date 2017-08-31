@@ -5,7 +5,7 @@ import core.driver.singleton.WebDriverSingleton;
 import core.utils.Waiter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import core.utils.Logger;
+import core.utils.MyLogger;
 
 /**
  * Created by Dina_Abdykasheva on 6/15/2017.
@@ -49,7 +49,7 @@ public class WriteMailPage extends AbstractPage {
     public AccountPage sendMail() {
         WebDriverSingleton.getWebDriverInstance().findElement(SEND_MAIL_BUTTON_LOCATOR).click();
         Waiter.waitForElementPresent(ExpectedConditions.visibilityOfElementLocated(MAIL_IS_SENT_LOCATOR));
-        Logger.info("Mail was successfully sent");
+        MyLogger.info("Mail was successfully sent");
         return new AccountPage();
     }
 

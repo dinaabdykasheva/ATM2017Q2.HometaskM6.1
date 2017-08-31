@@ -2,7 +2,6 @@ package app.pages;
 
 import core.driver.singleton.WebDriverSingleton;
 import org.openqa.selenium.By;
-import core.utils.Logger;
 
 /**
  * Created by Dina_Abdykasheva on 6/15/2017.

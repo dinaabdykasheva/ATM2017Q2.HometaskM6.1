@@ -3,7 +3,7 @@ package test;
 import app.business_objects.Mail;
 import app.business_objects.User;
 import app.pages.*;
-import core.utils.Logger;
+import core.utils.MyLogger;
 import core.utils.Screenshoter;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
@@ -27,9 +27,9 @@ public class GMailTestPO extends BaseTest {
         boolean isAccountIconPresent = accountPage.isAccountIconPresent();
         if (isAccountIconPresent) {
             Assert.assertTrue(isAccountIconPresent, "User isn't logged in");
-            Logger.info("User is successfully logged in");
+            MyLogger.info("User is successfully logged in");
         } else {
-            Logger.error("User wasn't logged in");
+            MyLogger.error("User wasn't logged in");
             Screenshoter.takeScreenshot();
         }
 
@@ -43,9 +43,9 @@ public class GMailTestPO extends BaseTest {
         boolean isDraftMailSaved = writeMail.isDraftMailDisplayed(mail);
         if (isDraftMailSaved) {
             Assert.assertTrue(isDraftMailSaved, "Mail wasn't saved to drafts");
-            Logger.info("mail is save to drafts");
+            MyLogger.info("mail is save to drafts");
         } else {
-            Logger.error("Mail wasn't saved to drafts");
+            MyLogger.error("Mail wasn't saved to drafts");
             Screenshoter.takeScreenshot();
         }
 
@@ -58,9 +58,9 @@ public class GMailTestPO extends BaseTest {
         String receiver = openSavedDraft.getReceiver();
         if (receiver.equals(recipient)) {
             Assert.assertEquals(recipient, receiver, "");
-            Logger.info("Receiver is valid");
+            MyLogger.info("Receiver is valid");
         } else {
-            Logger.error("Receiver isn't valid");
+            MyLogger.error("Receiver isn't valid");
             Screenshoter.takeScreenshot();
         }
 
@@ -72,9 +72,9 @@ public class GMailTestPO extends BaseTest {
         String mailSubject = new WriteMailPage().getSubject();
         if (mailSubject.equals(subject)) {
             Assert.assertEquals(subject, mailSubject, "Subject isn't valid");
-            Logger.info("Subject is valid");
+            MyLogger.info("Subject is valid");
         } else {
-            Logger.error("Subject isn't valid");
+            MyLogger.error("Subject isn't valid");
             Screenshoter.takeScreenshot();
         }
 
@@ -86,9 +86,9 @@ public class GMailTestPO extends BaseTest {
         String mailBody = new WriteMailPage().getBody();
         if (mailBody.equals(body)) {
             Assert.assertEquals(body, mailBody, "Body isn't valid");
-            Logger.info("Body is valid");
+            MyLogger.info("Body is valid");
         } else {
-            Logger.error("Body isn't valid");
+            MyLogger.error("Body isn't valid");
             Screenshoter.takeScreenshot();
         }
 
@@ -100,9 +100,9 @@ public class GMailTestPO extends BaseTest {
         boolean isMailSent = sendMail.isMailSent(mail);
         if (isMailSent) {
             Assert.assertTrue(isMailSent, "Mail wasn't sent");
-            Logger.info("Mail was sent");
+            MyLogger.info("Mail was sent");
         } else {
-            Logger.error("Mail wasn't sent");
+            MyLogger.error("Mail wasn't sent");
             Screenshoter.takeScreenshot();
         }
 
@@ -114,9 +114,9 @@ public class GMailTestPO extends BaseTest {
         boolean isMailDeletedFromDrafts = openDraftFolder.isDraftMailDisplayed(mail);
         if (isMailDeletedFromDrafts) {
             Assert.assertFalse(isMailDeletedFromDrafts, "Mail isn't deleted from drafts");
-            Logger.info("Mail was deleted from drafts");
+            MyLogger.info("Mail was deleted from drafts");
         } else {
-            Logger.error("Mail wasn't deleted from drafts");
+            MyLogger.error("Mail wasn't deleted from drafts");
             Screenshoter.takeScreenshot();
         }
 
@@ -128,9 +128,9 @@ public class GMailTestPO extends BaseTest {
         boolean isUserLoggedOff = exitGMail.isUserLoggedOff();
         if (isUserLoggedOff) {
             Assert.assertTrue(isUserLoggedOff, "User wasn't logged off");
-            Logger.info("User was logged off");
+            MyLogger.info("User was logged off");
         } else {
-            Logger.error("User wasn't logged off");
+            MyLogger.error("User wasn't logged off");
         }
 
     }
