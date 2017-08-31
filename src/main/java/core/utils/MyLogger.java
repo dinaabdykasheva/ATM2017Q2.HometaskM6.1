@@ -20,7 +20,4 @@ public class MyLogger {
         logger.debug(message);
     }
 
-    public static void error(String message, Throwable throwable) {
-        logger.error(message, throwable);
-    }
 }
