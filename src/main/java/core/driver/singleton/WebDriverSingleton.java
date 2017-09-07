@@ -42,7 +42,7 @@ public class WebDriverSingleton {
             try {
                 instance.quit();
             } catch (Exception e) {
-                MyLogger.error("Cannot kill browser");
+                MyLogger.logger.error("Cannot kill browser");
             } finally {
                 instance = null;
             }

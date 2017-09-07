@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestNg]">
+  <parameter name="password" value="testtest0"/>
+  <parameter name="subject" value="mentoring task"/>
+  <parameter name="recipient" value="dina_abdykasheva@mail.ru"/>
+  <parameter name="body" value="body text"/>
+  <parameter name="username" value="test.da.10062017"/>
+  <test name="GMailTest(failed)">
+    <parameter name="password" value="testtest0"/>
+    <parameter name="subject" value="mentoring task"/>
+    <parameter name="recipient" value="dina_abdykasheva@mail.ru"/>
+    <parameter name="body" value="body text"/>
+    <parameter name="username" value="test.da.10062017"/>
+    <classes>
+      <class name="test.GMailTestPO">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="loginToAccountTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- test.GMailTestPO -->
+    </classes>
+  </test> <!-- GMailTest(failed) -->
+</suite> <!-- Failed suite [TestNg] -->

@@ -40,11 +40,11 @@ public class WebDriverDecorator implements WebDriver, TakesScreenshot {
         List<WebElement> elements = driver.findElements(by);
         WebElement firstElement;
         if (elements.size() != 0) {
-            MyLogger.debug("Finding element");
+            MyLogger.logger.debug("Finding element");
             firstElement = elements.get(0);
             WebElementsUtils.executeJavaScript(driver, by, "arguments[0].style.backgroundColor = '"+ "yellow" + "'");
         } else {
-            MyLogger.error("element not found");
+            MyLogger.logger.error("element not found");
             return null;
         }
         return firstElement;
@@ -59,7 +59,7 @@ public class WebDriverDecorator implements WebDriver, TakesScreenshot {
     }
 
     public void quit() {
-        MyLogger.info("Browser will be closed now...");
+        MyLogger.logger.info("Browser will be closed now...");
         driver.quit();
     }
 
@@ -83,7 +83,7 @@ public class WebDriverDecorator implements WebDriver, TakesScreenshot {
         return driver.manage();
     }
 
-    public <File> File getScreenshotAs(OutputType<File> outputType) throws WebDriverException {
-        return (File) outputType;
+    public <X> X getScreenshotAs(OutputType<X> outputType) throws WebDriverException {
+        return ((TakesScreenshot) driver).getScreenshotAs(outputType);
     }
 }

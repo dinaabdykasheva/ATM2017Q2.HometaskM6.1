@@ -1,8 +1,10 @@
-19:00:22 DEBUG MyLogger.debug - Finding element
-19:00:22 DEBUG MyLogger.debug - Finding element
-19:00:23 DEBUG MyLogger.debug - Finding element
-19:00:23 DEBUG MyLogger.debug - Finding element
-19:00:24 DEBUG MyLogger.debug - Finding element
-19:00:34 ERROR MyLogger.error - User wasn't logged in
-19:00:44 ERROR MyLogger.error - element not found
-19:00:44 INFO  MyLogger.info - Browser will be closed now...
+10:19:09 DEBUG WebDriverDecorator.findElement - Finding element
+10:19:09 DEBUG WebDriverDecorator.findElement - Finding element
+10:19:09 DEBUG WebDriverDecorator.findElement - Finding element
+10:19:10 DEBUG WebDriverDecorator.findElement - Finding element
+10:19:10 DEBUG WebDriverDecorator.findElement - Finding element
+10:19:10 DEBUG WebDriverDecorator.findElement - Finding element
+10:19:20 ERROR GMailTestPO.loginToAccountTest - User isn't logged in
+10:19:20 INFO  Screenshoter.takeScreenshot - Saved screenshot: screenshots/src1561599139312777
+10:19:20 INFO  WebDriverDecorator.quit - Browser will be closed now...
+10:19:21 ERROR WebDriverSingleton.kill - Cannot kill browser

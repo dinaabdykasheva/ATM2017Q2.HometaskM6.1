@@ -49,7 +49,7 @@ public class WriteMailPage extends AbstractPage {
     public AccountPage sendMail() {
         WebDriverSingleton.getWebDriverInstance().findElement(SEND_MAIL_BUTTON_LOCATOR).click();
         Waiter.waitForElementPresent(ExpectedConditions.visibilityOfElementLocated(MAIL_IS_SENT_LOCATOR));
-        MyLogger.info("Mail was successfully sent");
+        MyLogger.logger.info("Mail was successfully sent");
         return new AccountPage();
     }
 
