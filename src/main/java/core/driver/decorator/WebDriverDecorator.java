@@ -2,10 +2,10 @@ package core.driver.decorator;
 
 import core.utils.MyLogger;
 import core.utils.WebElementsUtils;
-import gherkin.lexer.Fi;
+
 import org.openqa.selenium.*;
 
-import java.io.File;
+
 import java.util.List;
 import java.util.Set;
 
